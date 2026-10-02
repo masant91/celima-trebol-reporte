@@ -1,0 +1,259 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Crisp · Setiembre 2026</title><style>
+:root{--ink:#0f172a;--muted:#64748b;--line:#e2e8f0;--bg:#f8fafc;--card:#fff;--brand:#0f172a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:inherit}
+.wrap{max-width:1360px;margin:0 auto;padding:0 32px 64px}
+nav.top{background:rgba(255,255,255,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.stickyhead{position:sticky;top:0;z-index:20}
+nav.top .in{max-width:1360px;margin:0 auto;padding:10px 32px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+nav.top a{font-size:12.5px;text-decoration:none;color:var(--muted);padding:5px 10px;border-radius:999px;border:1px solid transparent;white-space:nowrap}
+nav.top a:hover{background:#f1f5f9;color:var(--ink)}
+nav.top a.home{font-weight:700;color:var(--ink)}
+.msel{margin-left:auto;display:flex;align-items:center;gap:7px;font-size:12px;color:var(--muted)}
+.msel select{font:inherit;font-size:12.5px;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:8px;padding:5px 9px;cursor:pointer}
+.msel select:hover{border-color:#94a3b8}
+.periodo{display:block;width:fit-content;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:3px 12px;font-size:12.5px;font-weight:600;margin:10px 0}
+nav.top a.act{background:#0f172a;color:#fff}
+/* Sub-barra de secciones de la marca */
+.subnav{background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.subnav .in{max-width:1360px;margin:0 auto;padding:8px 32px;display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.subnav a{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;text-decoration:none;color:var(--muted);padding:5px 11px;border-radius:8px;border:1px solid var(--line);white-space:nowrap}
+.subnav a:hover{border-color:#94a3b8;color:var(--ink)}
+.subnav a.act{background:#0f172a;color:#fff;border-color:#0f172a}
+.subnav .resum{font-weight:650;color:var(--ink)}
+.navgrps{display:flex;gap:6px;align-items:center;flex-wrap:nowrap;flex-shrink:0}
+.navgrp{display:inline-flex;align-items:center;gap:6px;padding:4px 8px 4px 6px;border-radius:10px;background:#f8fafc;border:1px solid var(--line)}
+.navgrp-campana{background:#eef4ff;border-color:#d7e5ff}
+.navgrp-regular{background:#f6f7f9}
+.navgrp-organico{background:#effaf3;border-color:#cdeed8}
+.navgt{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);padding:0 3px}
+.navgrp a{border:1px solid transparent;background:#fff}
+.subnav a svg{width:14px;height:14px}
+.subnav a.act svg{color:#fff!important}
+/* Logo de marca sobre chip blanco: el de Celima es negro y se perdería en la portada oscura */
+.blogo{display:block;width:fit-content;background:#fff;border-radius:10px;padding:9px 14px;margin:14px 0 0}
+.blogo img{height:32px;width:auto;display:block}
+/* Tarjetas de sección en el resumen de marca */
+.secgroup{margin-bottom:18px}
+.secgt{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:8px}
+.secgt b{color:var(--ink);font-size:14px;letter-spacing:0;text-transform:none;margin-left:6px}
+/* Tarjetas de sección en cuadrícula, con los KPIs en cuadrantes */
+.secgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:12px}
+.seccard{display:block;text-decoration:none;background:var(--card);border:1px solid var(--line);border-radius:11px;padding:14px 16px;transition:.15s}
+.seccard:hover{border-color:#94a3b8;transform:translateY(-1px);box-shadow:0 2px 10px rgba(15,23,42,.06)}
+.seccard .sn{display:flex;align-items:center;gap:7px;font-weight:650;font-size:14.5px}
+.seccard .sn svg{width:17px;height:17px}
+.sfacts{display:flex;gap:22px;margin:9px 0 12px;padding-bottom:11px;border-bottom:1px solid var(--line)}
+.sfacts span{display:block;font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.sfacts b{font-size:18px;font-weight:700}
+.kgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(128px,1fr));gap:9px}
+.kq{background:#f8fafc;border:1px solid var(--line);border-radius:9px;padding:9px 11px}
+.kqo{font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:3px}
+.kqv{font-size:21px;font-weight:750;line-height:1.1}
+.kql{font-size:11.5px;color:var(--ink);margin-top:1px}
+.kqc{font-size:11.5px;color:var(--muted);margin-top:4px}
+.kqc span{opacity:.8}
+/* Encabezado de etapa (Hero → Hub → Hygiene) dentro de cada red */
+.stagehead{display:flex;align-items:baseline;gap:10px;margin:22px 0 2px;padding-bottom:6px;border-bottom:2px solid var(--line)}
+.stagehead:first-child{margin-top:4px}
+.stagen{font-weight:700;font-size:14.5px}
+.stages{font-size:12px;color:var(--muted);margin-left:auto}
+.brandcard .blogo2{background:#fff;border:1px solid var(--line);border-radius:8px;padding:7px 11px;display:inline-block;margin-bottom:10px}
+.brandcard .blogo2 img{height:26px;width:auto;display:block}
+.cover{background:linear-gradient(125deg,#0b1220,#1e293b);color:#fff;padding:44px 0 40px;margin-bottom:26px}
+/* Franja con el color corporativo de la marca; el logo va en blanco encima */
+.cover-celima{background:linear-gradient(125deg,#1BB8DB,#0E7E97)}
+.cover-trebol{background:linear-gradient(125deg,#E20A17,#8E0610)}
+.blogo-marca{width:fit-content;margin:14px 0 0}
+.blogo-marca img{height:34px;width:auto;display:block;filter:brightness(0) invert(1)}
+.cover .in{max-width:1360px;margin:0 auto;padding:0 32px}
+.cover .eyebrow{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;opacity:.72}
+.cover h1{margin:8px 0 4px;font-size:34px;letter-spacing:-.02em}
+.cover .sub{opacity:.82;font-size:14px}
+.cover .facts{display:flex;gap:26px;flex-wrap:wrap;margin-top:20px;font-size:12.5px;opacity:.9}
+.cover .facts b{display:block;font-size:19px;opacity:1;margin-top:2px}
+section{margin:30px 0}
+h2{font-size:20px;margin:0 0 4px;letter-spacing:-.01em}
+h3{font-size:15.5px;margin:22px 0 8px}
+.lead{color:var(--muted);margin:0 0 14px;font-size:13px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:14px}
+.nethead{display:flex;align-items:center;gap:10px;color:#fff;padding:11px 15px;border-radius:11px 11px 0 0;font-weight:650}
+.netbody{border:1px solid var(--line);border-top:0;border-radius:0 0 11px 11px;background:var(--card);padding:16px;margin-bottom:20px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(132px,1fr));gap:9px;margin:10px 0}
+.tiles-mid{grid-template-columns:repeat(2,minmax(150px,210px));justify-content:center;margin:14px auto}
+.tile{background:#f8fafc;border:1px solid var(--line);border-radius:9px;padding:9px 11px}
+.tile .k{font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.tile .v{font-size:17px;font-weight:680;margin-top:2px}
+.tile .kc{font-size:10.5px;color:var(--muted);margin-top:2px}
+.convrow{margin-top:14px;padding-top:12px;border-top:1px dashed var(--line)}
+.convt{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:6px}
+.tile.hl{color:#fff;border:0}
+.tile.hl .k{color:rgba(255,255,255,.85)}
+table{width:100%;border-collapse:collapse;font-size:12.5px}
+th,td{padding:7px 10px;border-bottom:1px solid var(--line);text-align:center;vertical-align:middle;white-space:nowrap}
+th:first-child,td:first-child{text-align:left;white-space:normal}
+th:first-child,td:first-child{text-align:left}
+th{font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:600;background:#f8fafc}
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.objhead{display:inline-block;font-weight:650;font-size:13px;padding:4px 11px;border-radius:999px;margin:16px 0 2px}
+.chip{display:inline-block;font-size:11px;padding:2px 8px;border-radius:999px;background:#f1f5f9;color:var(--muted);margin-left:6px}
+.thumb{width:34px;height:34px;border-radius:6px;object-fit:cover;background:#f1f5f9;vertical-align:middle;margin-right:8px}
+.adcell{display:flex;align-items:center;gap:0;text-align:left}
+.warn{background:#fffbeb;border:1px solid #fde68a;border-radius:10px;padding:13px 15px;font-size:13px;color:#78350f}
+.warn b{color:#78350f}
+.foot{color:var(--muted);font-size:11.5px;border-top:1px solid var(--line);padding-top:14px;margin-top:34px}
+.brandcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.brandcard{display:block;text-decoration:none;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px;transition:.15s}
+.brandcard:hover{border-color:#94a3b8;transform:translateY(-1px)}
+.brandcard .nm{font-size:22px;font-weight:700;letter-spacing:-.01em}
+.brandcard .sp{font-size:26px;font-weight:700;margin:8px 0 2px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px;font-size:12px;color:var(--muted)}
+/* Barra apilada: 2px de hueco entre segmentos, extremos redondeados */
+.stackrow{display:flex;align-items:center;gap:12px}
+.stackt{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);width:76px;flex:none}
+.stack{display:flex;height:30px;flex:1;border-radius:6px;overflow:hidden;gap:2px;background:var(--line)}
+.seg{display:flex;align-items:center;justify-content:center;min-width:2px}
+.seg:first-child{border-radius:6px 0 0 6px}
+/* Franja-medidor: el hueco es el plan de esa red, el relleno lo ejecutado */
+.slot{position:relative;background:#e8edf3;justify-content:center}
+.slot.offslot{background:repeating-linear-gradient(45deg,#eef2f7,#eef2f7 5px,#e2e8f0 5px,#e2e8f0 10px)}
+.segfill{position:absolute;left:0;top:0;bottom:0}
+.slot .segl{position:relative;z-index:1}
+.segl.off{color:#64748b;text-shadow:none}
+.legoff .lgn,.legoff b{color:#94a3b8}
+.legoff em{font-style:italic}
+.seg:last-child{border-radius:0 6px 6px 0}
+.segl{color:#fff;font-size:11px;font-weight:700;text-shadow:0 1px 2px rgba(0,0,0,.25)}
+.leg{margin:12px 0 0 88px;font-size:12.5px;color:var(--muted)}
+.legi{display:grid;grid-template-columns:20px 1fr 62px 96px;align-items:center;gap:8px;padding:4px 0;border-bottom:1px solid #f1f5f9}
+.legi:last-child{border-bottom:0}
+.lgi{display:inline-flex}
+.lgi svg{width:15px;height:15px}
+.lgn{color:var(--ink);font-weight:600}
+.legi b{color:var(--ink);text-align:right}
+.legi em{font-style:normal;opacity:.75;text-align:right}
+/* Medidor plan vs ejecutado */
+.meter{display:grid;grid-template-columns:132px 1fr 152px 62px;gap:12px;align-items:center;padding:7px 0;border-bottom:1px solid var(--line)}
+.meter:last-child{border-bottom:0}
+.ml{display:flex;align-items:center;gap:7px;font-weight:600;font-size:13px}
+.mt{position:relative;height:10px;background:#eef2f7;border-radius:999px;overflow:hidden}
+.mt-off{background:repeating-linear-gradient(45deg,#f1f5f9,#f1f5f9 4px,#e2e8f0 4px,#e2e8f0 8px)}
+.invcell{text-align:left;padding-top:9px;padding-bottom:9px}
+.invrow{display:flex;align-items:center;gap:10px}
+.invrow .mt{flex:1;min-width:90px}
+.planlbl{font-size:11px;color:var(--muted);white-space:nowrap}
+.ejeclbl{font-size:11.5px;color:var(--muted);margin-top:4px}
+.ejeclbl b{color:var(--ink);font-weight:650}
+.mf{height:100%;border-radius:999px}
+.mover{position:absolute;inset:0;border-radius:999px;border:2px dashed;opacity:.55}
+.mv{font-size:12.5px;text-align:right}
+.mv span{color:var(--muted)}
+.mp{text-align:right;font-size:13px}
+.mnote{grid-column:1/-1;font-size:11.5px;color:#92400e;background:#fffbeb;border:1px solid #fde68a;border-radius:7px;padding:6px 10px;margin-top:6px}
+.tagna{display:inline-block;font-size:10.5px;background:#f1f5f9;color:var(--muted);border-radius:999px;padding:2px 8px;white-space:nowrap}
+td.ok{color:#166534;font-weight:600}
+td.bajo{color:#92400e;font-weight:600}
+td.alto{color:#991b1b;font-weight:600}
+.barcell{padding-right:14px}
+.bar{height:7px;background:#eef2f7;border-radius:999px;overflow:hidden}
+.barf{height:100%;background:#34A853;border-radius:999px}
+.ytwrap{display:flex;gap:14px;align-items:flex-start;margin-bottom:14px}
+.ytwrap img{width:196px;height:110px;object-fit:cover;border-radius:9px;border:1px solid var(--line);flex:none}
+.ytmeta{font-size:13px}
+.ytmeta .ytt{font-weight:650;margin-bottom:3px}
+.ytmeta a{color:var(--muted);font-size:12px}
+.netc{display:inline-flex;vertical-align:-3px;margin-right:6px}
+.netc svg{width:14px;height:14px}
+th.bhead{text-align:left;font-size:14px;text-transform:none;letter-spacing:0;color:var(--ink);font-weight:700;background:#fff;padding:10px 10px 8px}
+.bhlogo{height:26px;width:auto;display:block}
+tr.subb td{border-top:1px solid var(--line);font-weight:650;background:#f8fafc;color:var(--ink)}
+tr.subb td:first-child{color:var(--muted);font-size:11.5px;text-transform:uppercase;letter-spacing:.05em}
+tr.sub td{border-top:2px solid #cbd5e1;border-bottom:0;font-weight:700;background:#eef2f7}
+tr.tot td{border:0;font-weight:700;font-size:15px;padding:10px 9px}
+tr.tot td:first-child{color:var(--ink)}
+.motivo{font-size:10.5px;color:var(--muted);margin-top:2px;font-style:italic}
+/* Orgánico: dos gráficos por fila, y miniatura del top contenido */
+.tortas{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:14px}
+.tortacard{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
+.tortacard h3{margin:0 0 10px;font-size:14.5px}
+.tortawrap{display:flex;gap:16px;align-items:center}
+.legt{flex:1;min-width:0}
+.legp{display:grid;grid-template-columns:12px 1fr 52px 54px;align-items:center;gap:7px;padding:3px 0;font-size:12px;border-bottom:1px solid #f1f5f9}
+.legp:last-child{border-bottom:0}
+.legc{width:10px;height:10px;border-radius:3px;display:block}
+.legn{color:var(--ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.legp b{text-align:right;font-variant-numeric:tabular-nums}
+.legp em{font-style:normal;color:var(--muted);text-align:right;font-variant-numeric:tabular-nums}
+.toc{position:sticky;top:calc(var(--cab,112px) + 14px);z-index:14;display:flex;gap:4px;align-items:center;flex-wrap:wrap;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:11px;padding:8px 12px;margin:0 0 20px}
+.toct{font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-right:4px}
+.toc a{font-size:12.5px;text-decoration:none;color:var(--muted);padding:4px 10px;border-radius:7px;border:1px solid transparent;white-space:nowrap}
+.toc a:hover{background:#f1f5f9;color:var(--ink);border-color:var(--line)}
+/* Al saltar desde el índice, el destino queda debajo de la cabecera y del
+   propio índice si no se les reserva el alto. --cab y --toc se miden en la carga. */
+.org [id]{scroll-margin-top:calc(var(--cab,112px) + var(--toc,46px) + 34px)}
+.gpar{display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:18px;margin-bottom:8px}
+.gpar h3{margin-top:0}
+.gpar-solo{grid-template-columns:1fr 1fr}
+@media(max-width:800px){.gpar-solo{grid-template-columns:1fr}}
+.thumb-org{width:72px;height:72px;object-fit:cover;border-radius:8px;border:1px solid var(--line);display:block}
+@media(max-width:760px){.meter{grid-template-columns:1fr;gap:4px}.mv,.mp{text-align:left}.leg{margin-left:0}}
+@media(max-width:640px){.cover h1{font-size:26px}.split{grid-template-columns:1fr}}
+/* Crisp: entrada del menú con su ícono, portada con su azul y columnas por semana */
+nav.top a svg{width:15px;height:14px;vertical-align:-2px;margin-right:5px}
+nav.top a.act svg{color:#fff}
+.cover-crisp{background:linear-gradient(125deg,#1972F5,#0B4AB8)}
+.clogo{display:flex;align-items:center;gap:9px;margin:14px 0 0;font-size:24px;font-weight:700;letter-spacing:-.01em}
+.clogo svg{width:34px;height:31px}
+.brandcard .nm svg{width:22px;height:20px;vertical-align:-2px;margin-right:7px}
+.colsem g:hover path{opacity:.78}
+td.izq,th.izq{text-align:left;white-space:normal}
+.puntos{margin:0;padding-left:20px}
+.puntos li{margin:7px 0;max-width:110ch}
+.notas{font-size:12.5px;color:var(--muted)}
+</style></head><body>
+<div class="stickyhead"><nav class="top"><div class="in"><a class="home" href="index.html">Índice</a><a href="celima.html">Celima</a><a href="trebol.html">Trébol</a><a href="crisp.html" class="act"><span style="color:#1972F5"><svg viewBox="12 14 28.7 26" width="22" height="20" fill="currentColor" aria-hidden="true"><path d="M39.2427212,14 L40.6896552,32.5217457 L31.33,33.631 L28.2377046,40 L24.094,34.489 L13.4469339,35.7518301 L12,17.2300845 L39.2427212,14 Z"/></svg></span>Crisp</a><label class="msel"><span>Mes</span><select onchange="if(this.value)location.href=this.value"><option value="../2026-07/index.html">Julio 2026</option><option value="../2026-08/index.html">Agosto 2026</option><option value="../2026-09/crisp.html#vista" selected>Setiembre 2026</option></select></label></div></nav></div><div class="cover cover-crisp"><div class="in"><div class="eyebrow">Mensajería</div>
+<div class="clogo"><svg viewBox="12 14 28.7 26" width="22" height="20" fill="currentColor" aria-hidden="true"><path d="M39.2427212,14 L40.6896552,32.5217457 L31.33,33.631 L28.2377046,40 L24.094,34.489 L13.4469339,35.7518301 L12,17.2300845 L39.2427212,14 Z"/></svg><span>Crisp</span></div><div class="periodo">📅 Setiembre 2026</div>
+<h1>Conversaciones en Crisp</h1><div class="sub">Celima · Trébol · Setiembre 2026</div>
+<div class="facts"><div>Conversaciones<b>374</b></div><div>Cotización<b>95.2 %</b></div><div>Por día hábil<b>17.0</b></div><div>Días hábiles<b>22</b></div></div></div></div><div id="vista"></div><div class="wrap">
+<section><h2>Conversaciones por etiqueta y semana</h2>
+<p class="lead">Conteo del cuadro de Crisp. Las semanas van de lunes a viernes y no duran lo mismo, así que se comparan por día hábil.</p>
+<div class="card scroll"><table><thead><tr><th>Etiqueta</th><th>Sem 1<br><span style="font-weight:400;text-transform:none;letter-spacing:0">1–4 set</span></th><th>Sem 2<br><span style="font-weight:400;text-transform:none;letter-spacing:0">7–11 set</span></th><th>Sem 3<br><span style="font-weight:400;text-transform:none;letter-spacing:0">14–18 set</span></th><th>Sem 4<br><span style="font-weight:400;text-transform:none;letter-spacing:0">21–25 set</span></th><th>Sem 5<br><span style="font-weight:400;text-transform:none;letter-spacing:0">28–30 set</span></th><th>Mes</th><th>% del mes</th></tr></thead><tbody><tr><td>Cotización</td><td>47</td><td>97</td><td>85</td><td>61</td><td>66</td><td><b>356</b></td><td>95.2 %</td></tr><tr><td>Distribuidores</td><td>0</td><td>0</td><td>3</td><td>1</td><td>5</td><td><b>9</b></td><td>2.4 %</td></tr><tr><td>Queja/Reclamo</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td><b>0</b></td><td>0 %</td></tr><tr><td>Información general</td><td>0</td><td>8</td><td>0</td><td>0</td><td>1</td><td><b>9</b></td><td>2.4 %</td></tr>
+<tr class="sub"><td>Total</td><td>47</td><td>105</td><td>88</td><td>62</td><td>72</td><td>374</td><td>100 %</td></tr>
+<tr><td>Días hábiles</td><td>4</td><td>5</td><td>5</td><td>5</td><td>3</td><td>22</td><td></td></tr>
+<tr class="subb"><td>Por día hábil</td><td>11.8</td><td>21.0</td><td>17.6</td><td>12.4</td><td>24.0</td><td>17.0</td><td></td></tr></tbody></table></div><h3>Conversaciones por día hábil</h3><div class="card colsem"><svg viewBox="0 0 1240 250" width="100%" role="img" aria-label="Conversaciones de Crisp por día hábil, por semana"><g><title>Sem 1 · 1–4 set: 47 conversaciones en 4 días hábiles (11.8 por día)</title><rect x="12.0" y="0" width="243.2" height="250" fill="transparent"/><path d="M121.6,206V122.9Q121.6,118.9 125.6,118.9H141.6Q145.6,118.9 145.6,122.9V206Z" fill="#1972F5"/>
+<text x="133.6" y="111.9" text-anchor="middle" font-size="11.5" font-weight="600" fill="#0f172a">11.8</text>
+<text x="133.6" y="223" text-anchor="middle" font-size="11" fill="#0f172a">Sem 1</text>
+<text x="133.6" y="238" text-anchor="middle" font-size="10" fill="#64748b">1–4 set</text></g><g><title>Sem 2 · 7–11 set: 105 conversaciones en 5 días hábiles (21.0 por día)</title><rect x="255.2" y="0" width="243.2" height="250" fill="transparent"/><path d="M364.8,206V54.3Q364.8,50.3 368.8,50.3H384.8Q388.8,50.3 388.8,54.3V206Z" fill="#1972F5"/>
+<text x="376.8" y="43.3" text-anchor="middle" font-size="11.5" font-weight="600" fill="#0f172a">21.0</text>
+<text x="376.8" y="223" text-anchor="middle" font-size="11" fill="#0f172a">Sem 2</text>
+<text x="376.8" y="238" text-anchor="middle" font-size="10" fill="#64748b">7–11 set</text></g><g><title>Sem 3 · 14–18 set: 88 conversaciones en 5 días hábiles (17.6 por día)</title><rect x="498.4" y="0" width="243.2" height="250" fill="transparent"/><path d="M608.0,206V79.5Q608.0,75.5 612.0,75.5H628.0Q632.0,75.5 632.0,79.5V206Z" fill="#1972F5"/>
+<text x="620.0" y="68.5" text-anchor="middle" font-size="11.5" font-weight="600" fill="#0f172a">17.6</text>
+<text x="620.0" y="223" text-anchor="middle" font-size="11" fill="#0f172a">Sem 3</text>
+<text x="620.0" y="238" text-anchor="middle" font-size="10" fill="#64748b">14–18 set</text></g><g><title>Sem 4 · 21–25 set: 62 conversaciones en 5 días hábiles (12.4 por día)</title><rect x="741.6" y="0" width="243.2" height="250" fill="transparent"/><path d="M851.2,206V118.0Q851.2,114.0 855.2,114.0H871.2Q875.2,114.0 875.2,118.0V206Z" fill="#1972F5"/>
+<text x="863.2" y="107.0" text-anchor="middle" font-size="11.5" font-weight="600" fill="#0f172a">12.4</text>
+<text x="863.2" y="223" text-anchor="middle" font-size="11" fill="#0f172a">Sem 4</text>
+<text x="863.2" y="238" text-anchor="middle" font-size="10" fill="#64748b">21–25 set</text></g><g><title>Sem 5 · 28–30 set: 72 conversaciones en 3 días hábiles (24.0 por día)</title><rect x="984.8" y="0" width="243.2" height="250" fill="transparent"/><path d="M1094.4,206V32.0Q1094.4,28.0 1098.4,28.0H1114.4Q1118.4,28.0 1118.4,32.0V206Z" fill="#1972F5"/>
+<text x="1106.4" y="21.0" text-anchor="middle" font-size="11.5" font-weight="600" fill="#0f172a">24.0</text>
+<text x="1106.4" y="223" text-anchor="middle" font-size="11" fill="#0f172a">Sem 5</text>
+<text x="1106.4" y="238" text-anchor="middle" font-size="10" fill="#64748b">28–30 set</text></g><line x1="12" x2="1228" y1="206" y2="206" stroke="#cbd5e1" stroke-width="1"/></svg></div></section>
+<section><h2>Lectura</h2><div class="card"><ol class="puntos"><li><strong>Crisp es, en la práctica, un canal de cotizaciones.</strong> 356 de 374 conversaciones (95.2 %) son Cotización y ninguna semana baja de 91 %. Las otras tres etiquetas suman 18 en todo el mes.</li><li><strong>El ritmo no es parejo.</strong> Por día hábil va de 11.8 (Sem 1) a 24.0 (Sem 5): la mejor semana duplica a la peor. En totales, la Sem 5 (72) parece floja frente a la Sem 2 (105), pero tiene 3 días contra 5 y es la de mayor ritmo del mes.</li><li><strong>Queja/Reclamo está en cero las cinco semanas.</strong></li><li><strong>Distribuidores aparece recién en la segunda mitad:</strong> 0, 0, 3, 1 y 5. Son 9 casos, pocos para hablar de tendencia, pero 5 de los 9 caen en los últimos tres días.</li><li><strong>Información general se concentra en una sola semana:</strong> 8 de sus 9 casos son de la Sem 2.</li></ol></div></section>
+
+<section><h2>Recomendaciones</h2><div class="card"><ol class="puntos"><li><strong>Separar la etiqueta Cotización.</strong> Con el 95 % en una sola etiqueta no se ve qué se cotiza. Dividirla por marca (Celima / Trébol) y por línea de producto lo mostraría.</li><li><strong>Registrar el desenlace de cada cotización:</strong> enviada, derivada a tienda o distribuidor, sin respuesta. Hoy el cuadro mide cuánta gente escribe, no qué pasa después.</li><li><strong>Sumar el canal de origen de cada conversación</strong> (chat del sitio, WhatsApp, Instagram, Messenger, correo). Hoy el cuadro no dice por dónde llega cada consulta.</li><li><strong>Contar los fines de semana</strong>, o dejar explícito que no se atiende: el cuadro solo cubre de lunes a viernes.</li><li><strong>Revisar por dónde entran los reclamos.</strong> Un cero en cinco semanas sugiere que van por otro canal o que la etiqueta no se usa.</li></ol></div></section>
+
+</div><script>
+function medir(){
+  var h=document.querySelector(".stickyhead"),c=document.querySelector(".toc"),r=document.documentElement.style;
+  if(h)r.setProperty("--cab",h.offsetHeight+"px");
+  if(c)r.setProperty("--toc",c.offsetHeight+"px");
+}
+medir();addEventListener("resize",medir);
+addEventListener("load",function(){
+  medir();
+  if(location.hash!=="#vista")return;
+  var h=document.querySelector(".stickyhead"),t=document.getElementById("vista");
+  if(h&&t)window.scrollTo(0,Math.max(0,t.offsetTop-h.offsetHeight));
+});
+</script></body></html>
