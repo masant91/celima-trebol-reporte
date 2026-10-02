@@ -213,37 +213,76 @@ td.izq,th.izq{text-align:left;white-space:normal}
 .puntos{margin:0;padding-left:20px}
 .puntos li{margin:7px 0;max-width:110ch}
 .notas{font-size:12.5px;color:var(--muted)}
-/* Públicos: tarjetas de perfil con su insignia de prioridad, y cuadros de evidencia */
-.pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(390px,1fr));gap:14px;margin-bottom:8px}
-.pcard{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--pc,#0f172a);border-radius:12px;padding:16px}
+/* Web: portada con el naranja de Google Analytics y las páginas del tablero como imagen */
+.cover-web{background:linear-gradient(125deg,#B45309,#7C2D12)}
+.webpag{padding:10px}
+.webpag img{width:100%;height:auto;display:block;border-radius:8px}
+/* Públicos: elegir marca, tarjetas de perfil con su foto y perfil demográfico,
+   estructura por categoría y, si el JSON los trae, macro-perfiles */
+.msw{position:absolute;opacity:0;pointer-events:none}
+.mpick{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:0 0 6px}
+.mpick .toct{margin-right:2px}
+.mpick label{display:flex;align-items:center;justify-content:center;min-width:190px;height:64px;padding:0 26px;background:#fff;border:2px solid var(--line);border-radius:14px;cursor:pointer;font-weight:700;font-size:17px;transition:.15s;opacity:.62}
+.mpick label:hover{opacity:1;border-color:#94a3b8}
+.mpick label img{height:30px;width:auto;display:block}
+.mpanel{display:none}
+#m-celima:checked~.mp-celima,#m-trebol:checked~.mp-trebol{display:block}
+#m-celima:checked~.mpick label[for=m-celima],#m-trebol:checked~.mpick label[for=m-trebol]{opacity:1;border-color:var(--pc);box-shadow:0 4px 14px rgba(15,23,42,.08)}
+#m-celima:focus-visible~.mpick label[for=m-celima],#m-trebol:focus-visible~.mpick label[for=m-trebol]{outline:2px solid #0f172a;outline-offset:3px}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(430px,1fr));gap:18px}
+.pcard{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.pfoto{height:250px;background-color:#e2e8f0;background-size:cover;background-position:center 28%;border-bottom:4px solid var(--pc,#0f172a)}
+.pin{padding:18px 20px 20px}
 .phead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
-.pcard h4{margin:0;font-size:16.5px;letter-spacing:-.01em}
-.pdef{font-size:12px;color:var(--muted);margin:4px 0 10px}
-.pdesc{margin:0 0 12px}
-.prio{flex:none;font-size:11px;font-weight:700;padding:3px 9px;border-radius:999px;white-space:nowrap}
-.prio-alta{background:#dcfce7;color:#166534}
-.prio-media{background:#fef3c7;color:#92400e}
-.prio-baja{background:#f1f5f9;color:#475569}
+.pcard h4{margin:0;font-size:19px;letter-spacing:-.015em;line-height:1.2}
+.pmacro{flex:none;font-size:11px;font-weight:600;padding:3px 10px;border-radius:999px;background:#f1f5f9;color:#475569;white-space:nowrap}
+.pdesc{margin:8px 0 16px;font-size:14px;color:#334155}
+.psub{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);margin:0 0 8px}
+.dgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:18px}
+.dcell{background:#f8fafc;border:1px solid var(--line);border-radius:11px;padding:11px 13px}
+.dk{display:flex;align-items:center;gap:8px;font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.dico{flex:none;display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:8px;background:#fff;border:1px solid var(--line);color:var(--pc,#0f172a)}
+.dico svg{width:15px;height:15px}
+.dv{font-size:15px;font-weight:700;margin:2px 0 7px;letter-spacing:-.005em}
+.darg{font-size:12px;color:#475569;margin:8px 0 0;line-height:1.45}
+.dbar{display:grid;grid-template-columns:38px 1fr 34px;align-items:center;gap:7px;font-size:11px;color:var(--muted);margin:3px 0}
+.dbar i{display:block;height:8px;background:#e8edf3;border-radius:4px;overflow:hidden}
+.dbar i u{display:block;height:100%;border-radius:0 4px 4px 0;background:var(--pc,#0f172a)}
+.dbar b{color:var(--ink);font-weight:600;text-align:right;font-variant-numeric:tabular-nums}
 .pdl{display:grid;grid-template-columns:100px 1fr;gap:7px 12px;font-size:12.5px;margin:0}
 .pdl dt{font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);padding-top:2px}
 .pdl dd{margin:0}
 .pdl ul{margin:0;padding-left:16px}
 .ptag{display:inline-block;font-size:11.5px;background:#f1f5f9;border-radius:6px;padding:2px 7px;margin:0 4px 4px 0}
-.pev{margin-top:12px;padding-top:10px;border-top:1px dashed var(--line);font-size:12.5px;color:#334155}
-.pev span{display:block;font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-bottom:2px}
-.cgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:14px}
-.cgrid .card{margin:0}
-.cgrid h3{margin:0 0 8px}
-.hall p{margin:0 0 9px;max-width:120ch}
-.hall p:last-child{margin-bottom:0}
+.dcell .ptag{background:#fff;border:1px solid var(--line)}
 .mdot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:7px}
-td.mut{color:var(--muted)}
-.pmarca{display:flex;align-items:center;gap:10px;margin:22px 0 10px}
-.pmarca .blogo2{background:#fff;border:1px solid var(--line);border-radius:8px;padding:6px 10px}
-.pmarca .blogo2 img{height:22px;width:auto;display:block}
-.pmarca b{font-size:16px}
+/* Estructura: categoría → perfil → uso, una fila por perfil */
+.eflow{display:grid;gap:10px}
+.erow{display:grid;grid-template-columns:minmax(0,1.15fr) 22px minmax(0,1fr) 22px minmax(0,1.25fr);align-items:center;gap:14px;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--pc,#0f172a);border-radius:13px;padding:14px 18px}
+.elab{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:5px}
+.ecat .ptag{font-size:12.5px;padding:4px 10px;border-radius:8px;font-weight:600;color:var(--ink)}
+.earrow{color:#94a3b8;display:flex}
+.earrow svg{width:22px;height:22px}
+.eper{display:flex;align-items:center;gap:11px}
+.eper b{font-size:14.5px;line-height:1.25}
+.avatar{flex:none;width:46px;height:46px;border-radius:50%;background-color:#e2e8f0;background-size:cover;background-position:center 22%;border:2px solid #fff;box-shadow:0 0 0 1px var(--line)}
+.avatar.sin{display:flex;align-items:center;justify-content:center;color:var(--muted)}
+.avatar.sin svg{width:20px;height:20px}
+.euso{display:grid;gap:8px;font-size:13px}
+.euso .elab{margin-bottom:1px}
+/* Macro-perfiles */
+.mgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(430px,1fr));gap:16px}
+.mcard{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;display:flex;flex-direction:column}
+.mcard h3{margin:0 0 4px;font-size:18px;letter-spacing:-.01em}
+.mporque{margin:0 0 14px;color:#334155}
+.mlist{display:grid;gap:8px;margin:0 0 14px}
+.mitem{display:flex;align-items:center;gap:10px;font-size:13.5px;font-weight:600}
+.mitem small{display:block;font-weight:400;font-size:11.5px;color:var(--muted)}
+.mriesgo{margin-top:auto;background:#fffbeb;border:1px solid #fde68a;border-radius:10px;padding:10px 13px;font-size:12.5px;color:#78350f}
+.mriesgo span{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.08em;font-weight:700;margin-bottom:2px}
+@media(max-width:820px){.erow{grid-template-columns:1fr}.earrow{transform:rotate(90deg);justify-content:flex-start}.dgrid{grid-template-columns:1fr}.pgrid,.mgrid{grid-template-columns:1fr}}
 </style></head><body>
-<div class="stickyhead"><nav class="top"><div class="in"><a class="home" href="index.html">Índice</a><a href="celima.html">Celima</a><a href="trebol.html">Trébol</a><a href="crisp.html" class="act"><span style="color:#1972F5"><svg viewBox="12 14 28.7 26" width="22" height="20" fill="currentColor" aria-hidden="true"><path d="M39.2427212,14 L40.6896552,32.5217457 L31.33,33.631 L28.2377046,40 L24.094,34.489 L13.4469339,35.7518301 L12,17.2300845 L39.2427212,14 Z"/></svg></span>Crisp</a><a href="publicos.html"><svg viewBox="0 0 24 24" width="15" height="14" fill="currentColor" aria-hidden="true"><path d="M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm-7 9a7 7 0 0 1 14 0H2Zm15-9.5a3.5 3.5 0 1 0-1.7-6.6 6 6 0 0 1 .2 6.3c.5.2 1 .3 1.5.3Zm.6 2c-.5 0-.9 0-1.3.2A9 9 0 0 1 18 20h4a6 6 0 0 0-4.4-7.5Z"/></svg>Públicos</a><label class="msel"><span>Mes</span><select onchange="if(this.value)location.href=this.value"><option value="../2026-07/index.html">Julio 2026</option><option value="../2026-08/index.html">Agosto 2026</option><option value="../2026-09/crisp.html#vista" selected>Setiembre 2026</option></select></label></div></nav></div><div class="cover cover-crisp"><div class="in"><div class="eyebrow">Mensajería</div>
+<div class="stickyhead"><nav class="top"><div class="in"><a class="home" href="index.html">Índice</a><a href="celima.html">Celima</a><a href="trebol.html">Trébol</a><a href="crisp.html" class="act"><span style="color:#1972F5"><svg viewBox="12 14 28.7 26" width="22" height="20" fill="currentColor" aria-hidden="true"><path d="M39.2427212,14 L40.6896552,32.5217457 L31.33,33.631 L28.2377046,40 L24.094,34.489 L13.4469339,35.7518301 L12,17.2300845 L39.2427212,14 Z"/></svg></span>Crisp</a><a href="web.html"><span style="color:#E37400"><svg viewBox="0 0 24 24" width="15" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span>Web</a><a href="publicos.html"><svg viewBox="0 0 24 24" width="15" height="14" fill="currentColor" aria-hidden="true"><path d="M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm-7 9a7 7 0 0 1 14 0H2Zm15-9.5a3.5 3.5 0 1 0-1.7-6.6 6 6 0 0 1 .2 6.3c.5.2 1 .3 1.5.3Zm.6 2c-.5 0-.9 0-1.3.2A9 9 0 0 1 18 20h4a6 6 0 0 0-4.4-7.5Z"/></svg>Públicos</a><label class="msel"><span>Mes</span><select onchange="if(this.value)location.href=this.value"><option value="../2026-07/index.html">Julio 2026</option><option value="../2026-08/index.html">Agosto 2026</option><option value="../2026-09/crisp.html#vista" selected>Setiembre 2026</option></select></label></div></nav></div><div class="cover cover-crisp"><div class="in"><div class="eyebrow">Mensajería</div>
 <div class="clogo"><svg viewBox="12 14 28.7 26" width="22" height="20" fill="currentColor" aria-hidden="true"><path d="M39.2427212,14 L40.6896552,32.5217457 L31.33,33.631 L28.2377046,40 L24.094,34.489 L13.4469339,35.7518301 L12,17.2300845 L39.2427212,14 Z"/></svg><span>Crisp</span></div><div class="periodo">📅 Setiembre 2026</div>
 <h1>Conversaciones en Crisp</h1><div class="sub">Celima · Trébol · Setiembre 2026</div>
 <div class="facts"><div>Conversaciones<b>374</b></div><div>Cotización<b>95.2 %</b></div><div>Por día hábil<b>17.0</b></div><div>Días hábiles<b>22</b></div></div></div></div><div id="vista"></div><div class="wrap">
