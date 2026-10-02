@@ -193,7 +193,7 @@ tr.tot td:first-child{color:var(--ink)}
 .toc a:hover{background:#f1f5f9;color:var(--ink);border-color:var(--line)}
 /* Al saltar desde el índice, el destino queda debajo de la cabecera y del
    propio índice si no se les reserva el alto. --cab y --toc se miden en la carga. */
-.org [id]{scroll-margin-top:calc(var(--cab,112px) + var(--toc,46px) + 34px)}
+.org [id],.pub [id]{scroll-margin-top:calc(var(--cab,112px) + var(--toc,46px) + 34px)}
 .gpar{display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:18px;margin-bottom:8px}
 .gpar h3{margin-top:0}
 .gpar-solo{grid-template-columns:1fr 1fr}
@@ -213,8 +213,37 @@ td.izq,th.izq{text-align:left;white-space:normal}
 .puntos{margin:0;padding-left:20px}
 .puntos li{margin:7px 0;max-width:110ch}
 .notas{font-size:12.5px;color:var(--muted)}
+/* Públicos: tarjetas de perfil con su insignia de prioridad, y cuadros de evidencia */
+.pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(390px,1fr));gap:14px;margin-bottom:8px}
+.pcard{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--pc,#0f172a);border-radius:12px;padding:16px}
+.phead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+.pcard h4{margin:0;font-size:16.5px;letter-spacing:-.01em}
+.pdef{font-size:12px;color:var(--muted);margin:4px 0 10px}
+.pdesc{margin:0 0 12px}
+.prio{flex:none;font-size:11px;font-weight:700;padding:3px 9px;border-radius:999px;white-space:nowrap}
+.prio-alta{background:#dcfce7;color:#166534}
+.prio-media{background:#fef3c7;color:#92400e}
+.prio-baja{background:#f1f5f9;color:#475569}
+.pdl{display:grid;grid-template-columns:100px 1fr;gap:7px 12px;font-size:12.5px;margin:0}
+.pdl dt{font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);padding-top:2px}
+.pdl dd{margin:0}
+.pdl ul{margin:0;padding-left:16px}
+.ptag{display:inline-block;font-size:11.5px;background:#f1f5f9;border-radius:6px;padding:2px 7px;margin:0 4px 4px 0}
+.pev{margin-top:12px;padding-top:10px;border-top:1px dashed var(--line);font-size:12.5px;color:#334155}
+.pev span{display:block;font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-bottom:2px}
+.cgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:14px}
+.cgrid .card{margin:0}
+.cgrid h3{margin:0 0 8px}
+.hall p{margin:0 0 9px;max-width:120ch}
+.hall p:last-child{margin-bottom:0}
+.mdot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:7px}
+td.mut{color:var(--muted)}
+.pmarca{display:flex;align-items:center;gap:10px;margin:22px 0 10px}
+.pmarca .blogo2{background:#fff;border:1px solid var(--line);border-radius:8px;padding:6px 10px}
+.pmarca .blogo2 img{height:22px;width:auto;display:block}
+.pmarca b{font-size:16px}
 </style></head><body>
-<div class="stickyhead"><nav class="top"><div class="in"><a class="home" href="index.html">Índice</a><a href="celima.html">Celima</a><a href="trebol.html">Trébol</a><a href="crisp.html" class="act"><span style="color:#1972F5"><svg viewBox="12 14 28.7 26" width="22" height="20" fill="currentColor" aria-hidden="true"><path d="M39.2427212,14 L40.6896552,32.5217457 L31.33,33.631 L28.2377046,40 L24.094,34.489 L13.4469339,35.7518301 L12,17.2300845 L39.2427212,14 Z"/></svg></span>Crisp</a><label class="msel"><span>Mes</span><select onchange="if(this.value)location.href=this.value"><option value="../2026-07/index.html">Julio 2026</option><option value="../2026-08/index.html">Agosto 2026</option><option value="../2026-09/crisp.html#vista" selected>Setiembre 2026</option></select></label></div></nav></div><div class="cover cover-crisp"><div class="in"><div class="eyebrow">Mensajería</div>
+<div class="stickyhead"><nav class="top"><div class="in"><a class="home" href="index.html">Índice</a><a href="celima.html">Celima</a><a href="trebol.html">Trébol</a><a href="crisp.html" class="act"><span style="color:#1972F5"><svg viewBox="12 14 28.7 26" width="22" height="20" fill="currentColor" aria-hidden="true"><path d="M39.2427212,14 L40.6896552,32.5217457 L31.33,33.631 L28.2377046,40 L24.094,34.489 L13.4469339,35.7518301 L12,17.2300845 L39.2427212,14 Z"/></svg></span>Crisp</a><a href="publicos.html"><svg viewBox="0 0 24 24" width="15" height="14" fill="currentColor" aria-hidden="true"><path d="M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm-7 9a7 7 0 0 1 14 0H2Zm15-9.5a3.5 3.5 0 1 0-1.7-6.6 6 6 0 0 1 .2 6.3c.5.2 1 .3 1.5.3Zm.6 2c-.5 0-.9 0-1.3.2A9 9 0 0 1 18 20h4a6 6 0 0 0-4.4-7.5Z"/></svg>Públicos</a><label class="msel"><span>Mes</span><select onchange="if(this.value)location.href=this.value"><option value="../2026-07/index.html">Julio 2026</option><option value="../2026-08/index.html">Agosto 2026</option><option value="../2026-09/crisp.html#vista" selected>Setiembre 2026</option></select></label></div></nav></div><div class="cover cover-crisp"><div class="in"><div class="eyebrow">Mensajería</div>
 <div class="clogo"><svg viewBox="12 14 28.7 26" width="22" height="20" fill="currentColor" aria-hidden="true"><path d="M39.2427212,14 L40.6896552,32.5217457 L31.33,33.631 L28.2377046,40 L24.094,34.489 L13.4469339,35.7518301 L12,17.2300845 L39.2427212,14 Z"/></svg><span>Crisp</span></div><div class="periodo">📅 Setiembre 2026</div>
 <h1>Conversaciones en Crisp</h1><div class="sub">Celima · Trébol · Setiembre 2026</div>
 <div class="facts"><div>Conversaciones<b>374</b></div><div>Cotización<b>95.2 %</b></div><div>Por día hábil<b>17.0</b></div><div>Días hábiles<b>22</b></div></div></div></div><div id="vista"></div><div class="wrap">
